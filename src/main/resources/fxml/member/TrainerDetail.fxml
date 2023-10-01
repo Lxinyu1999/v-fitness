@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="523.0" prefWidth="1082.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group77.fitness.fitnesscore.controller.member.TrainerDetailController">
+    <ImageView fx:id="imageViewAvatar" fitHeight="150.0" fitWidth="157.0" layoutX="218.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
+    <Label layoutX="432.0" layoutY="35.0" text="ID: " />
+    <Label fx:id="labelID" layoutX="537.0" layoutY="35.0" prefHeight="15.0" prefWidth="56.0" />
+    <Label layoutX="417.0" layoutY="63.0" text="Gender: " />
+    <Label fx:id="labelGender" layoutX="537.0" layoutY="63.0" prefHeight="15.0" prefWidth="62.0" />
+    <Label layoutX="424.0" layoutY="94.0" text="Age: " />
+    <Label fx:id="labelAge" layoutX="543.0" layoutY="94.0" prefHeight="15.0" prefWidth="49.0" />
+    <Label layoutX="394.0" layoutY="121.0" text="Teaching Subjects:" />
+    <TextArea fx:id="textAreaTeachingSubjects" editable="false" layoutX="520.0" layoutY="121.0" prefHeight="74.0" prefWidth="376.0" />
+    <Label layoutX="452.0" layoutY="248.0" text="Book a Live Session">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+    </Label>
+    <AnchorPane fx:id="anchorPaneLiveSession" layoutY="258.0" prefHeight="265.0" prefWidth="1090.0">
+        <Label layoutX="9.0" layoutY="34.0" text="Session Subject:" />
+        <ChoiceBox fx:id="choiceBoxSessionSubject" layoutX="116.0" layoutY="30.0" prefHeight="23.0" prefWidth="147.0" />
+        <Label layoutX="294.0" layoutY="34.0" text="Session Date:" />
+        <DatePicker fx:id="datePickerSessionDate" layoutX="382.0" layoutY="30.0" />
+        <Label layoutX="595.0" layoutY="34.0" text="Start Time:" />
+        <Spinner fx:id="spinnerStartTimeHour" editable="true" layoutX="668.0" layoutY="30.0" prefHeight="23.0" prefWidth="62.0" />
+        <Spinner fx:id="spinnerStartTimeMinute" editable="true" layoutX="744.0" layoutY="30.0" prefHeight="23.0" prefWidth="62.0" />
+        <Label layoutX="819.0" layoutY="34.0" text="End Time:" />
+        <Spinner fx:id="spinnerEndTimeHour" editable="true" layoutX="892.0" layoutY="30.0" prefHeight="23.0" prefWidth="62.0" />
+        <Spinner fx:id="spinnerEndTimeMinute" editable="true" layoutX="968.0" layoutY="30.0" prefHeight="23.0" prefWidth="62.0" />
+        <Label fx:id="labelWarningSessionSubject" layoutX="63.0" layoutY="53.0" prefHeight="15.0" prefWidth="147.0" textFill="RED" />
+        <Label fx:id="labelWarningSessionTime" layoutX="741.0" layoutY="60.0" prefHeight="15.0" prefWidth="304.0" textFill="RED" />
+        <AnchorPane fx:id="anchorPaneTimeLabel" layoutX="22.0" layoutY="80.0" prefHeight="24.0" prefWidth="1051.0" />
+        <AnchorPane fx:id="anchorPaneTimeLine" layoutX="22.0" layoutY="96.0" prefHeight="24.0" prefWidth="1051.0" style="-fx-background-color: #d3d7d4ff" />
+        <HBox fx:id="hBoxTimelineScale" layoutX="17.0" layoutY="125.0" prefHeight="24.0" prefWidth="1062.0" />
+        <Button fx:id="buttonBook" layoutX="499.0" layoutY="228.0" mnemonicParsing="false" onMouseClicked="#buttonBookMouseClicked" text="Book" />
+        <VBox layoutX="50.0" layoutY="149.0" prefHeight="66.0" prefWidth="174.0" spacing="10">
+            <HBox prefHeight="9.0" prefWidth="199.0" spacing="3">
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7d4" height="15.0" stroke="#d3d7d4" strokeType="INSIDE" width="54.0" />
+                <Label prefHeight="15.0" prefWidth="130.0" text="Nonworking Time" />
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="12.0" prefWidth="199.0" spacing="3">
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGREEN" height="15.0" stroke="LIGHTGREEN" strokeType="INSIDE" width="54.0" />
+                <Label prefHeight="15.0" prefWidth="56.0" text="Available" />
+            </HBox>
+            <HBox layoutX="10.0" layoutY="36.0" prefHeight="10.0" prefWidth="199.0" spacing="3">
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTPINK" height="15.0" stroke="LIGHTPINK" strokeType="INSIDE" width="54.0" />
+                <Label prefHeight="15.0" prefWidth="67.0" text="Reserved" />
+            </HBox>
+        </VBox>
+    </AnchorPane>
+</AnchorPane>

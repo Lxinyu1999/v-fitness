@@ -1,0 +1,36 @@
+{
+  "gymName": "London Fitness",
+  "address": "Mile End Rd, Bethnal Green, London",
+  "telephone": "020-1234567",
+  "email": "contact@londonfitness.com",
+  "openingHours": [
+    "08:00",
+    "24:00"
+  ],
+  "trainerWorkingHours": [
+    "08:00",
+    "12:00",
+    "13:00",
+    "21:00"
+  ],
+  "sportsCategories": [
+    "Bodybuilding",
+    "Running",
+    "Yoga",
+    "Swimming",
+    "Biking"
+  ],
+  "membershipTypes": [
+    "Ordinary",
+    "Bronze",
+    "Sliver",
+    "Gold"
+  ],
+  "courseLevels": [
+    "Introduction",
+    "Junior",
+    "Intermediate",
+    "Senior",
+    "Other"
+  ]
+}

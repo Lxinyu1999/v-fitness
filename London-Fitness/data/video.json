@@ -1,0 +1,38 @@
+{
+  "videoIdCounter": 3,
+  "videoList": [
+    {
+      "videoID": "SV1",
+      "displayName": "Equipment Overview for Bodybuilding",
+      "category": "Bodybuilding",
+      "seriesID": "VS1",
+      "level": "Introduction",
+      "lowestMembershipRequirement": "Ordinary",
+      "uploadTime": "2021-04-04 04:03:21",
+      "coverFilename": "SV1.jpg",
+      "videoFilename": "SV1.mp4"
+    },
+    {
+      "videoID": "SV2",
+      "displayName": "Yoga Introduction",
+      "category": "Yoga",
+      "seriesID": "",
+      "level": "Introduction",
+      "lowestMembershipRequirement": "Ordinary",
+      "uploadTime": "2021-04-04 04:03:22",
+      "coverFilename": "SV2.jpg",
+      "videoFilename": "SV2.mp4"
+    },
+    {
+      "videoID": "SV3",
+      "displayName": "Introduction to Bodybuilding",
+      "category": "Bodybuilding",
+      "seriesID": "VS1",
+      "level": "Junior",
+      "lowestMembershipRequirement": "Bronze",
+      "uploadTime": "2021-05-06 15:19:51",
+      "coverFilename": "SV3.png",
+      "videoFilename": "SV3.mp4"
+    }
+  ]
+}

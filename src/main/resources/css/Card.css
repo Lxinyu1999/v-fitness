@@ -1,0 +1,18 @@
+.root {
+    -fx-background-color: WHITE;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(gaussian, black, 5, 0, 0, 0);
+    -fx-background-radius: 20px;
+    -fx-background-insets: 10px;
+}
+
+.root:hover {
+    -fx-effect: dropshadow(gaussian, black, 15, 0, 0, 0);
+    -fx-cursor: hand;
+}
+
+.labelInfo {
+    -fx-padding: 6px;
+    -fx-background-radius: 2em;
+    -fx-text-fill: WHITE;
+}

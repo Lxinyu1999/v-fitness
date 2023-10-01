@@ -1,0 +1,17 @@
+/* Will also cover the PasswordField */
+.text-field{
+    -fx-background-radius: 2em;
+}
+
+.button {
+    -fx-background-radius: 2em;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-effect: dropshadow(gaussian, black, 10, 0, 0, 0);
+}
+
+.labelPasswordVisibility:hover {
+    -fx-cursor: hand;
+}

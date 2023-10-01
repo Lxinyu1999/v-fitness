@@ -1,0 +1,39 @@
+.buttonTab {
+    -fx-background-color: WHITE;
+    -fx-background-radius: 2em;
+    -fx-max-height: 45px;
+    -fx-max-width: 45px;
+    -fx-min-height: 45px;
+    -fx-min-width: 45px;
+}
+
+.fontIconButtonTab {
+    -fx-icon-size: 20px;
+    -fx-icon-color: #2a5caa;
+}
+
+.buttonTab:hover {
+    -fx-background-color: #2a5caa;
+    -fx-background-radius: 1em;
+    -fx-cursor: hand;
+}
+
+.buttonTab:hover FontIcon {
+    -fx-icon-color: WHITE;
+}
+
+.tooltipButtonTab {
+    -fx-show-delay: 1ms;
+    -fx-font-size: 15px;
+    -fx-text-fill: BLACK;
+    -fx-background-color: WHITE;
+}
+
+/* Hide the tab bar of the TabPane */
+.tabPane {
+    -fx-tab-max-height: 0;
+}
+
+.tabPane .tab-header-area {
+    visibility: hidden;
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group77.fitness.fitnesscore.controller.manager.GymManagementController">
+    <VBox alignment="CENTER" layoutX="174.0" layoutY="29.0" prefHeight="200.0" prefWidth="542.0">
+        <HBox prefHeight="150.0" prefWidth="528.0">
+            <VBox alignment="CENTER" prefHeight="150.0" prefWidth="130.0" spacing="20.0">
+                <Label text="Gym Name: ">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Address: ">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Telephone: ">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="E-mail: ">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="388.0" spacing="10.0">
+                <TextField fx:id="textFieldGymName" />
+                <TextField fx:id="textFieldAddress" />
+                <TextField fx:id="textFieldTelephone" />
+                <TextField fx:id="textFieldEmail" />
+            </VBox>
+        </HBox>
+        <Button fx:id="buttonBasicInfoSaveChanges" disable="true" mnemonicParsing="false" onMouseClicked="#buttonBasicInfoSaveChangesMouseClicked" text="Save Changes" />
+    </VBox>
+    <HBox layoutX="53.0" layoutY="241.0" prefHeight="277.0" prefWidth="994.0" spacing="10.0">
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="302.0" spacing="5.0">
+            <Label alignment="CENTER" text="Sports Categories">
+                <font>
+                    <Font name="System Bold" size="14.0" />
+                </font>
+            </Label>
+            <ListView fx:id="listViewSportsCategories" prefHeight="142.0" prefWidth="302.0" />
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="302.0" spacing="5.0">
+                <Button fx:id="buttonSportsCategoriesSaveChanges" disable="true" mnemonicParsing="false" onMouseClicked="#buttonSportsCategoriesSaveChangesMouseClicked" text="Save Changes" />
+                <Button mnemonicParsing="false" onMouseClicked="#buttonSportsCategoriesAddMouseClicked" text="Add" />
+                <Button mnemonicParsing="false" onMouseClicked="#buttonSportsCategoriesDeleteMouseClicked" text="Delete Selected Item" />
+            </HBox>
+        </VBox>
+
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="296.0" spacing="5.0">
+            <Label alignment="CENTER" text="Membership Types">
+                <font>
+                    <Font name="System Bold" size="14.0" />
+                </font>
+            </Label>
+            <ListView fx:id="listViewMembershipTypes" prefHeight="146.0" prefWidth="296.0" />
+            <HBox alignment="CENTER" prefHeight="27.0" prefWidth="296.0" spacing="5.0">
+                <Button fx:id="buttonMembershipTypesSaveChanges" disable="true" mnemonicParsing="false" onMouseClicked="#buttonMembershipTypesSaveChangesMouseClicked" text="Save Changes" />
+                <Button mnemonicParsing="false" onMouseClicked="#buttonMembershipTypesAddMouseClicked" text="Add" />
+                <Button mnemonicParsing="false" onMouseClicked="#buttonMembershipTypesDeleteMouseClicked" text="Delete Selected Item" />
+            </HBox>
+        </VBox>
+
+        <VBox alignment="CENTER" prefHeight="134.0" prefWidth="296.0" spacing="5.0">
+            <Label alignment="CENTER" text="Course Levels">
+                <font>
+                    <Font name="System Bold" size="14.0" />
+                </font>
+            </Label>
+            <ListView fx:id="listViewCourseLevels" prefHeight="158.0" prefWidth="296.0" />
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="296.0" spacing="5.0">
+                <Button fx:id="buttonCourseLevelsSaveChanges" disable="true" mnemonicParsing="false" onMouseClicked="#buttonCourseLevelsSaveChangesMouseClicked" text="Save Changes" />
+                <Button mnemonicParsing="false" onMouseClicked="#buttonCourseLevelsAddMouseClicked" text="Add" />
+                <Button mnemonicParsing="false" onMouseClicked="#buttonCourseLevelsDeleteMouseClicked" text="Delete Selected Item" />
+            </HBox>
+        </VBox>
+    </HBox>
+   <Label layoutX="248.0" layoutY="511.0" prefHeight="15.0" prefWidth="532.0" text="(Double click an item in the lists to edit it, and then press enter to confirm the modification)" />
+</AnchorPane>

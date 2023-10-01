@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane prefHeight="630.0" prefWidth="1180.0" stylesheets="@../../css/Home.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group77.fitness.fitnesscore.controller.member.MemberHomeController">
+    <top>
+        <fx:include fx:id="topBar" source="../common/TopBar.fxml" />
+    </top>
+
+    <left>
+        <VBox fx:id="vBoxButtonTab" alignment="TOP_CENTER" prefHeight="550.0" prefWidth="62.0" spacing="9.0" style="-fx-background-color: #E3E5E8;-fx-padding: 10" BorderPane.alignment="CENTER">
+            <Button styleClass="buttonTab">
+                <graphic>
+                    <FontIcon iconLiteral="fa-video-camera" styleClass="fontIconButtonTab" />
+                </graphic>
+                <tooltip><Tooltip styleClass="tooltipButtonTab" text="Sports Videos" /></tooltip>
+            </Button>
+
+            <Button styleClass="buttonTab">
+                <graphic>
+                    <FontIcon iconLiteral="fa-list-alt" styleClass="fontIconButtonTab" />
+                </graphic>
+                <tooltip><Tooltip styleClass="tooltipButtonTab" text="Video Watching Records" /></tooltip>
+            </Button>
+
+            <Button styleClass="buttonTab">
+                <graphic>
+                    <FontIcon iconLiteral="fa-users" styleClass="fontIconButtonTab" />
+                </graphic>
+                <tooltip><Tooltip styleClass="tooltipButtonTab" text="Trainers" /></tooltip>
+            </Button>
+
+            <Button styleClass="buttonTab">
+                <graphic>
+                    <FontIcon iconLiteral="fa-diamond" styleClass="fontIconButtonTab" />
+                </graphic>
+                <tooltip><Tooltip styleClass="tooltipButtonTab" text="Membership" /></tooltip>
+            </Button>
+
+            <Button styleClass="buttonTab">
+                <graphic>
+                    <FontIcon iconLiteral="fa-user-circle-o" styleClass="fontIconButtonTab" />
+                </graphic>
+                <tooltip><Tooltip styleClass="tooltipButtonTab" text="Mine" /></tooltip>
+            </Button>
+
+
+            <Pane VBox.vgrow="ALWAYS" />
+
+            <Button styleClass="buttonTab">
+                <graphic>
+                    <FontIcon iconLiteral="fa-sign-out" styleClass="fontIconButtonTab"> </FontIcon>
+                </graphic>
+                <tooltip><Tooltip styleClass="tooltipButtonTab" text="Log out from This Account" /></tooltip>
+            </Button>
+        </VBox>
+    </left>
+
+    <center>
+        <TabPane fx:id="tabPane" prefHeight="550.0" prefWidth="1062.0" styleClass="tabPane" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <Tab closable="false" text="Sports Videos">
+                <ScrollPane fx:id="scrollPaneSportsVideo" prefHeight="550.0" prefWidth="1062.0">
+                    <VBox prefHeight="550.0" prefWidth="1109.0" spacing="20.0">
+                        <FlowPane fx:id="flowPaneSportsCategoryFilter" alignment="CENTER" hgap="10.0" vgap="5.0">
+                            <Label text="Filter by sports categories: ">
+                                <font>
+                                   <Font name="System Bold" size="12.0" />
+                                </font>
+                            </Label>
+                            <RadioButton selected="true" text="All" />
+                        </FlowPane>
+
+                        <FlowPane fx:id="flowPaneCourseLevelFilter" alignment="CENTER" hgap="10.0" vgap="5.0">
+                            <Label text="Filter by course levels: ">
+                                <font>
+                                    <Font name="System Bold" size="12.0" />
+                                </font>
+                            </Label>
+                            <RadioButton selected="true" text="All" />
+                        </FlowPane>
+
+                        <Separator prefWidth="200.0" />
+
+                        <FlowPane fx:id="flowPaneSportsVideo" prefHeight="455.0" prefWidth="1078.0" />
+                    </VBox>
+                </ScrollPane>
+            </Tab>
+
+            <Tab closable="false" text="Video Watching Records">
+                <fx:include fx:id="videoWatchingRecords" source="./VideoWatchingRecords.fxml" />
+            </Tab>
+
+            <Tab closable="false" text="Trainers">
+                <ScrollPane fx:id="scrollPaneTrainer">
+                    <VBox>
+                        <FlowPane fx:id="flowPaneTrainer" prefHeight="523.0" prefWidth="1062.0" />
+                    </VBox>
+                </ScrollPane>
+            </Tab>
+
+            <Tab closable="false" text="Membership">
+                <AnchorPane>
+                    <Label layoutX="478.0" layoutY="112.0" text="My Membership State:" />
+                    <Label fx:id="labelMembershipState" layoutX="627.0" layoutY="112.0" prefHeight="15.0" prefWidth="101.0" />
+                    <Label layoutX="478.0" layoutY="149.0" prefHeight="15.0" prefWidth="135.0" text="Optional Memberships:" />
+                    <ChoiceBox fx:id="choiceBoxOptionalMemberships" layoutX="627.0" layoutY="145.0" prefHeight="23.0" prefWidth="100.0" />
+                    <Label fx:id="labelWarningMembership" layoutX="521.0" layoutY="177.0" prefHeight="15.0" prefWidth="174.0" textFill="RED" />
+                    <Button fx:id="buttonChangeMembership" layoutX="583.0" layoutY="209.0" mnemonicParsing="false" onMouseClicked="#buttonChangeMembershipMouseClicked" text="Change" />
+               <Label layoutX="144.0" layoutY="71.0" text="SPECIAL OFFERS">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font>
+               </Label>
+               <Label layoutX="22.0" layoutY="112.0" text="Invite your friends to sign up, fill your account ID as the inviter ID." />
+               <Label layoutX="105.0" layoutY="160.0" text="We will offer you prizes as reward！" />
+                    <HBox alignment="CENTER" layoutX="37.0" layoutY="198.0" prefHeight="29.0" prefWidth="346.0" spacing="5.0">
+                        <Label text="You have invited " />
+                        <Label fx:id="labelInviteeCnt" alignment="CENTER" prefHeight="15.0" prefWidth="46.0" textFill="GREEN">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Label>
+                        <Label text="new members so far." />
+                    </HBox>
+                </AnchorPane>
+            </Tab>
+
+            <Tab text="Mine">
+                <fx:include fx:id="memberProfile" source="./MemberProfile.fxml" />
+            </Tab>
+
+        </TabPane>
+    </center>
+
+</BorderPane>

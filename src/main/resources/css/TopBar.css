@@ -1,0 +1,10 @@
+.textFieldSearch {
+    -fx-background-radius: 2em;
+}
+
+.labelMembershipType {
+    -fx-background-color: #fdb933;
+    -fx-background-radius: 2em;
+    -fx-text-fill: WHITE;
+    -fx-padding: 3px;
+}

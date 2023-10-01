@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="550.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group77.fitness.fitnesscore.controller.member.VideoPlayerController">
+    <VBox fx:id="vBoxVideoPlayer" alignment="CENTER" layoutX="25.0" layoutY="21.0" prefHeight="508.0" prefWidth="795.0" spacing="5.0">
+        <Label fx:id="labelVideoDisplayName" alignment="CENTER" prefHeight="19.0" prefWidth="794.0">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <MediaView fx:id="mediaViewVideoPlayer" fitHeight="432.0" fitWidth="768.0" />
+        <Slider fx:id="sliderTimeProgress" />
+        <HBox fx:id="hBoxVideoControlBar" alignment="CENTER" prefHeight="14.0" prefWidth="818.0" spacing="10.0">
+            <Button fx:id="buttonPlay" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 2em" text="⏸">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </Button>
+            <Button fx:id="buttonReset" mnemonicParsing="false">
+                <graphic>
+                    <FontIcon iconLiteral="fa-angle-double-left" />
+                </graphic>
+            </Button>
+            <Label fx:id="labelTimeProgress" />
+
+            <Pane HBox.hgrow="ALWAYS" />
+
+            <Label text="Volume: " />
+            <Slider fx:id="sliderVolume" showTickLabels="true" showTickMarks="true" />
+
+            <Button fx:id="buttonFullScreen" mnemonicParsing="false" onMouseClicked="#buttonFullScreenMouseClicked">
+                <graphic>
+                    <FontIcon iconLiteral="fa-arrows-alt" />
+                </graphic>
+            </Button>
+        </HBox>
+    </VBox>
+
+    <VBox alignment="CENTER" layoutX="841.0" layoutY="77.0" prefHeight="382.0" prefWidth="210.0" spacing="5.0">
+        <HBox prefHeight="14.0" prefWidth="163.0" spacing="3.0">
+            <Label text="Video Series">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <Pane HBox.hgrow="ALWAYS" />
+            <Label fx:id="labelSeriesProgress" />
+        </HBox>
+
+        <Label fx:id="labelSeriesName" />
+
+        <ListView fx:id="listViewSeries" prefHeight="352.0" prefWidth="240.0" />
+      <Button fx:id="buttonAddToLearningList" mnemonicParsing="false" onMouseClicked="#buttonAddToLearningListMouseClicked" prefHeight="23.0" prefWidth="198.0" text="Add this Series to Learning List" />
+    </VBox>
+</AnchorPane>

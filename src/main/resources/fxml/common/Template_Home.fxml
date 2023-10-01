@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="630.0" prefWidth="1100.0" stylesheets="@../../css/Home.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <fx:include fx:id="topBar" source="TopBar.fxml"/>
+    </top>
+
+    <left>
+        <VBox alignment="TOP_CENTER" prefHeight="550.0" prefWidth="62.0" spacing="9.0" style="-fx-background-color: #E3E5E8;-fx-padding: 10" BorderPane.alignment="CENTER">
+            <!-- An example for adding a Button -->
+            <Button styleClass="buttonTab">
+                <graphic>
+                    <FontIcon iconLiteral="fa-bell" styleClass="fontIconButtonTab"> </FontIcon>
+                </graphic>
+                <tooltip><Tooltip styleClass="tooltipButtonTab" text="This is test."/></tooltip>
+            </Button>
+
+            <!-- Make the Log Out remain at the bottom-->
+            <Pane VBox.vgrow="ALWAYS"/>
+
+            <Button styleClass="buttonTab">
+                <graphic>
+                    <FontIcon iconLiteral="fa-sign-out" styleClass="fontIconButtonTab"> </FontIcon>
+                </graphic>
+                <tooltip><Tooltip styleClass="tooltipButtonTab" text="Log out from This Account"/></tooltip>
+            </Button>
+        </VBox>
+    </left>
+
+    <center>
+       <TabPane fx:id="tabPane" prefHeight="550.0" prefWidth="1062.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER" styleClass="tabPane">
+           <!-- An example for adding a new tab -->
+<!--           <Tab>-->
+<!--               -->
+<!--           </Tab>-->
+       </TabPane>
+    </center>
+
+</BorderPane>
