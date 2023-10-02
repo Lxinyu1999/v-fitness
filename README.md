@@ -2,7 +2,12 @@
 
 This is a Java client program for a hypothetical gym called *London Fitness* to provide online services.
 
-**Current Version: 2.0**
+
+## Updates
+- (23.10.02) Missing images is added
+- (23.10.01) Fixed the bug that the system picture in the lecture system interface was not displayed.
+
+
 
 The following technologies are mainly used:
 
@@ -14,9 +19,9 @@ The following technologies are mainly used:
 
 
 
-## Accounts for Test
+## Try the programm by test account!
 
-Since the password have been encrypted in JSON files, you cannot read them as plain text. But you can use any of the following accounts to experience this program：
+Due to the password being encrypted in the JSON file, it cannot be read as plain text. But we provide several test accounts, and you can use any of the following accounts to experience this program:
 
 **Manager:**
 
@@ -41,7 +46,7 @@ Since the password have been encrypted in JSON files, you cannot read them as pl
 
 
 
-## Screenshots
+## Interface display
 
 ### Sign In
 <img src="./README-Images/Sign%20In.png" alt="image" style="zoom: 67%;" />
@@ -60,6 +65,11 @@ Since the password have been encrypted in JSON files, you cannot read them as pl
 
 #### 1. Register a New Trainer
 
+<!-- 这是一个注释，它不会在渲染后的 Markdown 中显示出来
+
+当URL中包含空格或某些特殊字符时，通常需要对它们进行URL编码，以确保它们可以被正确地解析。在URL编码中，空格通常被替换为%20。
+ -->
+
 ![image](./README-Images/Manager%20-%20Register%20A%20New%20Trainer.png)
 
 #### 2. Video Management
@@ -68,25 +78,16 @@ Since the password have been encrypted in JSON files, you cannot read them as pl
 
 #### 3. Member List
 
-![image](./README-Images/Manager - Member List.png)
+![image](./README-Images/Manager%20-%20Member%20List.png
+)
 
+#### 4. Gym Management
 
+![image](./README-Images/Manager%20-%20Gym%20Management.png)
 
-#### 4. Member List
+#### 5. Inactive Members
 
-![image](./README-Images/Manager - Trainer List.png)
-
-
-
-#### 5. Gym Management
-
-![image](./README-Images/Manager - Gym Management.png)
-
-
-
-#### 6. Inactive Members
-
-![image](./README-Images/Manager - Inactive Members.png)
+![image](./README-Images/Manager%20-%20Inactive%20Members.png)
 
 
 
@@ -98,7 +99,7 @@ Since the password have been encrypted in JSON files, you cannot read them as pl
 
 #### 1. Profile Editing
 
-![image](./README-Images/Trainer - Profile Editing.png)
+![image](./README-Images/Trainer%20-%20Profile%20Editing.png)
 
 #### 2. Schedule
 
@@ -127,13 +128,13 @@ Since the password have been encrypted in JSON files, you cannot read them as pl
 
 #### 3. Video Player (Full Screen)
 
-![image](./README-Images/Member%20-%20Video%20Player (Full Screen).png)
+![image](./README-Images/Member%20-%20Video%20Player%20(Full%20Screen).png)
 
 
 
 #### 4. Learning Records
 
-![image](./README-Images/Member - Learning Records.png)
+![image](./README-Images/Member%20-%20Learning%20Records.png)
 
 
 
@@ -151,5 +152,5 @@ Since the password have been encrypted in JSON files, you cannot read them as pl
 
 #### 8. Edit Profile
 
-![image](./README-Images/Member - Edit Profile.png)
+![image](./README-Images/Member%20-%20Edit%20Profile.png)
 
