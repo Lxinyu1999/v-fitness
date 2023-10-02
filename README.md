@@ -1,6 +1,6 @@
-# digital-gym
+# Digital Gym System
 
-This is a Java client program for a hypothetical gym called *London Fitness* to provide online services.
+This code is a Java client program for a hypothetical gym system called *"London Fitness"* to provide online services.
 
 
 ## Updates
